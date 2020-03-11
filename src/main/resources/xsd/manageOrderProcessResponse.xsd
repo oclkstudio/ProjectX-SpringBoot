@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema elementFormDefault="qualified" targetNamespace="http://www.turktelekom.com.tr/Services/OrderFulfillment/manageOrderProcessResponse/manageOrderProcessResponse/1.0"	xmlns="http://www.w3.org/2001/XMLSchema" 	xmlns:manageOrderProcessResponse="http://www.turktelekom.com.tr/Services/OrderFulfillment/manageOrderProcessResponse/manageOrderProcessResponse/1.0" 	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+	<annotation>
+		<documentation>Manage Order Process - Response</documentation>
+		<appinfo>
+			<metadata>POC</metadata>
+		</appinfo>
+	</annotation>
+	
+	<!-- Structures -->
+	
+	<element name="manageOrderProcessResponse">
+		<complexType >
+			<sequence>
+				<element name="requestId" minOccurs="1" maxOccurs="1" type="xsd:string"/>
+				<element name="Result" minOccurs="1" maxOccurs="1" type="xsd:string"/>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

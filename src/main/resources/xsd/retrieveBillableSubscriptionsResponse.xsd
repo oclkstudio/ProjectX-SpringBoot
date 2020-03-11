@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema elementFormDefault="qualified" targetNamespace="http://www.turktelekom.com.tr/Services/OrderFulfillment/retrieveBillableSubscriptions/retrieveBillableSubscriptions/1.0"	xmlns="http://www.w3.org/2001/XMLSchema" 	xmlns:retrieveBillableSubscriptions="http://www.turktelekom.com.tr/Services/OrderFulfillment/retrieveBillableSubscriptions/retrieveBillableSubscriptions/1.0" 	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+	<annotation>
+		<documentation>Retrieve Billable Subscriptions - Response</documentation>
+		<appinfo>
+			<metadata>POC</metadata>
+		</appinfo>
+	</annotation>
+	
+	<!-- Structures -->
+	
+	<element name="retrieveBillableSubscriptionsResponse">
+		<complexType >
+			<sequence>
+				<element name="requestId" minOccurs="1" maxOccurs="1" type="xsd:string"/>
+				<element name="subscriptionId" minOccurs="1" maxOccurs="unbounded" type="xsd:string"/>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

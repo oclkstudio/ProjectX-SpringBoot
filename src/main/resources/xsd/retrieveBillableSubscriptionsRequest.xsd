@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema elementFormDefault="qualified" targetNamespace="http://www.turktelekom.com.tr/aTTIP/Services/OrderFulfillment/retrieveBillableSubscriptions/retrieveBillableSubscriptions/1.0"	xmlns="http://www.w3.org/2001/XMLSchema" 	xmlns:retrieveBillableSubscriptions="http://www.turktelekom.com.tr/aTTIP/Services/OrderFulfillment/retrieveBillableSubscriptions/retrieveBillableSubscriptions/1.0" 	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+	<annotation>
+		<documentation>Retrieve Billable Subscriptions - Request</documentation>
+		<appinfo>
+			<metadata>POC</metadata>
+		</appinfo>
+	</annotation>
+	
+	<!-- Structures -->
+	
+	<element name="retrieveBillableSubscriptionsRequest">
+		<complexType >
+			<sequence>
+				<element name="requestId" minOccurs="1" maxOccurs="1" type="xsd:string"/>
+				<element name="turnKeyProjectCode" minOccurs="1" maxOccurs="1" type="xsd:string"/>
+			</sequence>
+		</complexType>
+	</element>
+</schema>
