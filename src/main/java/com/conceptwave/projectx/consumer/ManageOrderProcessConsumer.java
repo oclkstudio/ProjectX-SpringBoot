@@ -21,14 +21,22 @@ public class ManageOrderProcessConsumer {
     }
 
     public ManageOrderProcessResponse receive() {
-        while(received) {
+        try {
+            Thread.sleep(2000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        while(this.received) {
             try {
                 Thread.sleep(500L);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
+
         logger.info("received message='{}'", this.manageOrderProcessResponse.toString());
+        this.received = true;
         return this.manageOrderProcessResponse;
     }
 }

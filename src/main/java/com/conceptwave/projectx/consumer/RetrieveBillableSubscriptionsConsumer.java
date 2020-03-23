@@ -21,14 +21,16 @@ public class RetrieveBillableSubscriptionsConsumer {
     }
 
     public RetrieveBillableSubscriptionsResponse receive() {
-        while(received) {
+        while(this.received) {
             try {
                 Thread.sleep(500L);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
+
         logger.info("received message='{}'", this.retrieveBillableSubscriptionsResponse.toString());
+        this.received = true;
         return this.retrieveBillableSubscriptionsResponse;
     }
 }

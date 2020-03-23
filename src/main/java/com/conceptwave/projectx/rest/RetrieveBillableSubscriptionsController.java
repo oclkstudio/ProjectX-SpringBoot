@@ -12,9 +12,9 @@ public class RetrieveBillableSubscriptionsController {
     @Autowired
     private RetrieveBillableSubscriptionsService retrieveBillableSubscriptionsService;
 
-    @GetMapping("/projectCode")
-    @CrossOrigin(origins = "http://localhost:8081")
-    public RetrieveBillableSubscriptionsResponse get(@RequestParam(defaultValue="Turk_Telekom") String projectCode) {
+    @GetMapping
+    @CrossOrigin(origins = "http://localhost:3000")
+    public RetrieveBillableSubscriptionsResponse get(@RequestParam String projectCode) {
         RetrieveBillableSubscriptionsRequest retrieveBillableSubscriptionsRequest = new RetrieveBillableSubscriptionsRequest();
         retrieveBillableSubscriptionsRequest.setRequestId("23423234234");
         retrieveBillableSubscriptionsRequest.setTurnKeyProjectCode(projectCode);

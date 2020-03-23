@@ -12,11 +12,11 @@ public class ManageOrderProcessController {
     @Autowired
     private ManageOrderProcessService manageOrderProcessService;
 
-    @GetMapping("/subscriptionId")
-    @CrossOrigin(origins = "http://localhost:8081")
-    public ManageOrderProcessResponse get(@RequestParam(defaultValue="145646456456") String subscriptionId) {
+    @GetMapping
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ManageOrderProcessResponse get(@RequestParam("subscriptionId") String subscriptionId, @RequestParam("requestId") String requestId) {
         ManageOrderProcessRequest manageOrderProcessRequest = new ManageOrderProcessRequest();
-        manageOrderProcessRequest.setRequestId("23423234234");
+        manageOrderProcessRequest.setRequestId(requestId);
         manageOrderProcessRequest.setSubscriptionId(subscriptionId);
         manageOrderProcessService.send(manageOrderProcessRequest);
         return manageOrderProcessService.receive();

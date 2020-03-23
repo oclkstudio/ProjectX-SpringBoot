@@ -17,7 +17,7 @@ public class TtProjectController {
     private TtProjectService ttProjectService;
 
     @GetMapping("/all")
-    @CrossOrigin(origins = "http://localhost:8081")
+    @CrossOrigin(origins = "http://localhost:3000")
     public List<TtProject> findAll(){
         return ttProjectService.findAll();
     }
